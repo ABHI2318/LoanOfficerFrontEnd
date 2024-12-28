@@ -1,0 +1,20 @@
+<h2>Reply to Enquiry</h2>
+<form (ngSubmit)="onSubmit()">
+  <div>
+    <label>Enquiry ID:</label><br/>
+    <input type="number" [(ngModel)]="enquiryId" name="enquiryId" required />
+  </div>
+  <br/>
+  <div>
+    <label>Reply Message:</label><br/>
+    <textarea
+      [(ngModel)]="replyMessage"
+      name="replyMessage"
+      rows="4"
+      cols="50"
+      required
+    ></textarea>
+  </div>
+  <br/>
+  <button type="submit">Send Reply</button>
+</form>

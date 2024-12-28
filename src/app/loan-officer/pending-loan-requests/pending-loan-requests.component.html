@@ -1,0 +1,24 @@
+<h2>Pending Loan Requests</h2>
+<table border="1">
+  <thead>
+    <tr>
+      <th>Loan ID</th>
+      <th>User ID</th>
+      <th>Amount</th>
+      <th>Status</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let loan of pendingLoans">
+      <td>{{ loan.loanid }}</td>
+      <td>{{ loan.user_id }}</td>
+      <td>{{ loan.loanamount }}</td>
+      <td>{{ loan.loanstatus }}</td>
+      <td>
+        <button (click)="onApprove(loan.loanid)">Approve</button>
+        <button (click)="onReject(loan.loanid)">Reject</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
