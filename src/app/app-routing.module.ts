@@ -12,7 +12,7 @@ const routes: Routes = [
     path:'',component:LoanOfficerDashboardComponent,
     children: [
       {
-        path:'viewloanrequests',component:ViewLoanRequestsComponent,
+        path:'viewloanrequests',component:ViewLoanRequestsComponent
         
       },
       {

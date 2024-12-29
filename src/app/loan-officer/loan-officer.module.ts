@@ -7,6 +7,8 @@ import { UpdateProfileComponent } from './update-profile/update-profile.componen
 import { PendingLoanRequestsComponent } from './pending-loan-requests/pending-loan-requests.component';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AppRoutingModule } from '../app-routing.module';
+import { LoanOfficerService } from '../services/loan-officer.service';
 
 
 
@@ -22,8 +24,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    RouterModule,                // <-- Add this
+    RouterModule,     
+    AppRoutingModule           // <-- Add this
    
   ]
+
+  ,
+  providers: [LoanOfficerService],
 })
 export class LoanOfficerModule { }
